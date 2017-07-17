@@ -33,7 +33,7 @@ public class Analize {
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 		Mat m = Imgcodecs.imread("file:C:/Users/madla/OneDrive/Documents/GitHub/imgproc/VH484.jpg");
 
-		Image image = new Image("file:C:\\Users\\madla\\OneDrive\\Documents\\GitHub\\imgproc\\VH484.jpg");
+		Image image = new Image("file:C:\\Users\\Kenderák József\\git\\Pollen\\VH485.jpg");
 
 		img.setImage(image);
 
