@@ -27,7 +27,7 @@ public class Analize {
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.getExtensionFilters().addAll(new ExtensionFilter("images", "*.jpg"));
 		
-		File file = fileChooser.showOpenDialog(null);
+		//File file = fileChooser.showOpenDialog(null);
 		List<File> fileList = fileChooser.showOpenMultipleDialog(null);
 
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
