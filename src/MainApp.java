@@ -25,10 +25,10 @@ public class MainApp extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
+			
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("Main.fxml"));
 			rootLayout = (AnchorPane) loader.load();
-
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -37,5 +37,4 @@ public class MainApp extends Application {
 			e.printStackTrace();
 		}
 	}
-
 }
