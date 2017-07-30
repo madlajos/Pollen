@@ -7,5 +7,6 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/Letöltések/opencv/build/java/x64"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/madla/OneDrive/Documents/GitHub/Pollen/lib/ij.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
