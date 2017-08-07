@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/OpenCV/opencv/build/java/opencv-320.jar">
+	<classpathentry kind="lib" path="C:/Users/madla/OneDrive/Documents/GitHub/Pollen/lib/opencv-320.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/Letöltések/opencv/build/java/x64"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/madla/OneDrive/Documents/GitHub/Pollen"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/madla/OneDrive/Documents/GitHub/Pollen/lib/ij.jar"/>

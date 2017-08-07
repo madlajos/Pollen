@@ -22,6 +22,8 @@ import javafx.stage.FileChooser.ExtensionFilter;
 
 
 public class MainController {
+/*
+	
 	@FXML
 	private ImageView img;
 	@FXML
@@ -50,4 +52,6 @@ public class MainController {
 		//False-al kreálódik, hogy csak a browse után legyen látható
 		pagination.setVisible(true);
 	}
+	
+	*/
 }
