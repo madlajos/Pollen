@@ -72,10 +72,15 @@ public class MainForDev
 		hp.hoseMorphology();
 		hp.setThreshold();
 		hp.removeNoiseFromThresholdedImageForHose();
+		
+		HoseCounter hc = new HoseCounter();
+		hc.removePollens();
+		hc.HoseCount();
 
 		
-		Image imagetodisplay = toBufferedImage(Analize.removedNoiseFromHoseImage);
+		Image imagetodisplay = toBufferedImage(Analize.hoses);
         DisplayImage(imagetodisplay);
-        System.out.printf("Pollen Number is: %d", Analize.circleNumber);
+        System.out.printf("Pollen Number is: %d\n", Analize.circleNumber);
+        System.out.printf("Hose Number is: %d", Analize.hoseNumber);
 	}
 }

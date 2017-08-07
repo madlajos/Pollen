@@ -9,8 +9,7 @@ public class PreFilter extends Analize{
 	{
 		int operation = 3;
 		Mat element = Imgproc.getStructuringElement(2, new Size(2 * 5 + 1, 2 * 5 + 1), new Point(5, 5));
-		Analize.preFilteredImageForPollen = Analize.greyImage;
-		Imgproc.morphologyEx(Analize.preFilteredImageForPollen, Analize.greyImage, operation, element);
+		Imgproc.morphologyEx(Analize.greyImage, Analize.preFilteredImageForPollen, operation, element);
 	}
 
 	public void setThreshold()

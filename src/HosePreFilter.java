@@ -6,13 +6,12 @@ import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
-public class HosePreFilter extends HoseCounter
+public class HosePreFilter extends HoseOperations
 {
 	public void hoseMorphology()
 	{
 		int operation = 6; 
 		Mat element = Imgproc.getStructuringElement(1, new Size(2 * 21 + 1, 2 * 21 + 1), new Point(21, 21));
-		Analize.preFilteredImageForHose = Analize.greyImage;
 		Imgproc.morphologyEx(Analize.greyImage, Analize.preFilteredImageForHose, operation, element);		
 	}
 	
