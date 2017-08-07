@@ -2,24 +2,26 @@ import org.opencv.core.Mat;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
-public class PollenCounter extends Analize {
+public class PollenCounter extends Analize
+{	
+	public void pollenCounter() 
+	{
+		int minRadius = (int) (Analize.thresholdedImageForPollen.rows()*0.008);
+		int maxRadius = (int) (Analize.thresholdedImageForPollen.rows()*0.03);
+
 	
-	public void pollenCounter() {
-		int minRadius = (int) (thresholdedImage.rows()*0.008);
-		int maxRadius = (int) (thresholdedImage.rows()*0.03);
+		Imgproc.HoughCircles(Analize.thresholdedImageForPollen, Analize.circles, Imgproc.CV_HOUGH_GRADIENT, 1,
+							 Analize.thresholdedImageForPollen.rows()*0.02, 1, 8, minRadius, maxRadius);
 		
-		/*TODO csind meg stackoverflow alapjan*/
-	
-		Imgproc.HoughCircles(thresholdedImage, circles, Imgproc.CV_HOUGH_GRADIENT, 1, thresholdedImage.rows()*0.02, 1, 8, minRadius, maxRadius);
-		System.out.println(circles);
-		
-		
-		for(int i = 0; i < circles.cols(); i++) {
-			double[] circle = circles.get(0, i);
-			//g.drawOval((int)circle[0] - (int)circle[2], (int)circle[1] - (int)circle[2], (int)circle[2] * 2, (int)circle[2] * 2);
+		for(int i = 0; i < Analize.circles.cols(); i++)
+		{
+			double[] circle = Analize.circles.get(0, i);
+			Analize.circlesList.add(circle);
+			double radius = circle[2];
+			if(((circle[0] + radius*0.9) < Analize.thresholdedImageForPollen.cols()) && ((circle[0] - radius*0.9) > 0) && ((circle[1] + radius*0.9) < Analize.thresholdedImageForPollen.rows()) && ((circle[1] - radius*0.9) > 0))
+			{
+				Analize.circleNumber = Analize.circleNumber + 1;     
+			}       			
 		}
-		
-		//return 0;
-	}
-	
+	} 	
 }
