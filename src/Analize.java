@@ -16,6 +16,7 @@ public class Analize {
 	
 	public static void main(String args[]){
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+<<<<<<< HEAD
 		LoadImg li = new LoadImg();
 		
 		li.Beolvas();
@@ -26,5 +27,13 @@ public class Analize {
 		PreFilter pf = new PreFilter();
 		pf.preFilter();
 		pf.setThreshold();
+=======
+		Mat m = Imgcodecs.imread("file:C:/Users/madla/OneDrive/Documents/GitHub/imgproc/VH484.jpg");
+
+		Image image = new Image("file:C:\\Users\\Kenderák József\\git\\Pollen\\VH485.jpg");
+
+		img.setImage(image);
+
+>>>>>>> origin/master
 	}
 }
