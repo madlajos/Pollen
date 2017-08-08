@@ -5,6 +5,11 @@ import org.opencv.imgproc.Imgproc;
 
 public class PreFilter extends Analize{
 
+	/**
+	 preFilter(): setThreshold-hoz készíti elõ a képet
+	 operation: morphologyEx paraméter
+	 element:
+	 */
 	public void preFilter()
 	{
 		int operation = 3;
@@ -12,6 +17,9 @@ public class PreFilter extends Analize{
 		Imgproc.morphologyEx(Analize.greyImage, Analize.preFilteredImageForPollen, operation, element);
 	}
 
+	/**
+	 Thresholdozza az elõszûrt képet
+	 */
 	public void setThreshold()
 	{
 		Imgproc.threshold(Analize.preFilteredImageForPollen, Analize.thresholdedImageForPollen, 80, 255, 0);

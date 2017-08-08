@@ -12,6 +12,10 @@ import org.opencv.core.Mat;
 
 public class MainForDev
 {
+	/**
+	 * képek tesztelésére szolgál
+	 * @return: az ablakot adja vissza
+	 */
 	public static JFrame buildFrame()
 	{
         JFrame frame = new JFrame();
@@ -20,6 +24,10 @@ public class MainForDev
         frame.setVisible(true);
         return frame;
 	}
+	/**
+	 * Kirajzolja a képet
+	 * @param az image
+	 */
 	public static void DisplayImage(Image image)
 	{
         
@@ -50,6 +58,10 @@ public class MainForDev
           return image;
       }
 
+    /**
+     * Konstruktorok és meghívások
+     * @param args
+     */
 	public static void main(String args[])
 	{
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);

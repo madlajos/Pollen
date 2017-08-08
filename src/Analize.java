@@ -1,14 +1,22 @@
 import java.util.ArrayList;
-import java.util.List;
-
 import org.opencv.core.Mat;
 
 public class Analize 
 {
+	
+	/**
+	 * originalImage: betöltött kép / LoadImg.Beolvas()
+	 * resizedImage: méretcsökkentett kép / LoadImg.Resize()
+	 * greyImage: greyscale kép a méretcsökkentettbõl / LoadImg.Decolorize() 
+	 */
 	protected static Mat originalImage = new Mat();
 	protected static Mat resizedImage = new Mat();
 	protected static Mat greyImage = new Mat();
 	
+	/**
+	 * preFilteredImageForPollen: pollenek kiválogatva / Prefilter.preFilter()
+	 * thresholdedImageForPollen: prefilterelt képet thresholdolja / PreFilter.setThreshol()
+	 */
 	protected static Mat preFilteredImageForPollen = new Mat();
 	protected static Mat thresholdedImageForPollen = new Mat();
 	protected static Mat circles = new Mat();
