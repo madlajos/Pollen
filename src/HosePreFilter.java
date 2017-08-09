@@ -27,13 +27,11 @@ public class HosePreFilter extends HoseOperations
 		int ffillMode = 1;
 		int loDiff = 20, upDiff = 20;
 		int connectivity = 4;
-		boolean isColor = true;
-		boolean useMask = false;
 		int newMaskVal = 128;
 		Rect ccomp = new Rect();
 		int flags = connectivity + (newMaskVal << 8) +
 			(ffillMode == 1 ? Imgproc.FLOODFILL_FIXED_RANGE : 0);
-		int size;
+
 
 		Mat mask = new Mat(dst.rows() + 2, dst.cols() + 2, CvType.CV_8UC1, new Scalar(0));
 		for (int i = 0; i < Analize.circlesList.size(); i++)
@@ -46,7 +44,7 @@ public class HosePreFilter extends HoseOperations
 			{
 				Scalar newVal = new Scalar(128, 128, 128); ///A növesztett régió új színe
 				Point seed = new Point(circle[0],circle[1]); ///Régiónövesztés gyökere
-				size = Imgproc.floodFill(dst_gray, mask, seed, newVal, ccomp, new Scalar(loDiff, loDiff, loDiff), new Scalar(upDiff, upDiff, upDiff), flags);
+				Imgproc.floodFill(dst_gray, mask, seed, newVal, ccomp, new Scalar(loDiff, loDiff, loDiff), new Scalar(upDiff, upDiff, upDiff), flags);
 			}
 		}
 		return mask;

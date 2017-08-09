@@ -29,5 +29,11 @@ public class Analize
 	protected static Mat removedPollens = new Mat();
 	protected static int hoseNumber = 0;
 	protected static Mat hoses = new Mat();
+	
+	protected static Mat skeletonImage = new Mat();
+	protected static Mat clearedSkeletonImage = new Mat();	
+	
+	protected static Mat grownHoseEnds = new Mat();
+	protected static Mat HoseEnds = new Mat();
    
 }
