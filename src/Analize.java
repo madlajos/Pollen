@@ -33,7 +33,9 @@ public class Analize
 	protected static Mat skeletonImage = new Mat();
 	protected static Mat clearedSkeletonImage = new Mat();	
 	
-	protected static Mat grownHoseEnds = new Mat();
-	protected static Mat HoseEnds = new Mat();
+	protected static Mat grownhoseEnds = new Mat();
+	protected static Mat hoseEnds = new Mat();
+	
+	protected static ArrayList<Double> onePollenHoseLengths = new ArrayList<Double>();
    
 }

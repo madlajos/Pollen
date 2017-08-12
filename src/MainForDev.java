@@ -92,15 +92,16 @@ public class MainForDev
 		
 		skeleton skel = new skeleton();
 		Analize.skeletonImage = skel.createSkeleton();
-		Analize.clearedSkeletonImage = skel.clearSkeleton(Analize.skeletonImage);
+		Analize.clearedSkeletonImage = skeleton.clearSkeleton(Analize.skeletonImage);
 		
-		AssignHoseEndsToPollens a = new AssignHoseEndsToPollens();
-		Analize.grownHoseEnds = a.novesztes(Analize.clearedSkeletonImage);
-		Analize.HoseEnds = a.vegKeres(Analize.grownHoseEnds);
-		a.vegTorles(Analize.HoseEnds);
+		AssignhoseEndsToPollens a = new AssignhoseEndsToPollens();
+		Analize.grownhoseEnds = a.novesztes(Analize.clearedSkeletonImage);
+		Analize.hoseEnds = a.vegKeres(Analize.grownhoseEnds);/*TODO Novesztest nem kene torolni szamitaskor ?*/
+		a.vegTorles();
+		a.vegSzamol();
 
 		
-		Image imagetodisplay = toBufferedImage(Analize.HoseEnds);
+		Image imagetodisplay = toBufferedImage(Analize.hoseEnds);
         DisplayImage(imagetodisplay);
         System.out.printf("Pollen Number is: %d\n", Analize.circleNumber);
         System.out.printf("Hose Number is: %d", Analize.hoseNumber);

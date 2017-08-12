@@ -121,21 +121,18 @@ public class skeleton extends HoseOperations
 		}
 	}
 	
-	Mat clearSkeleton(Mat skeleton)
+	public static Mat clearSkeleton(Mat skeleton)
 	{
 		Mat tmp = new Mat();
 		skeleton.copyTo(tmp);
 		int ffillMode = 1;
 		int loDiff = 20, upDiff = 20;
 		int connectivity = 8;
-		boolean isColor = true;
-		boolean useMask = false;
 		Scalar newVal = new Scalar(128, 128, 128);
 		int newMaskVal = 128;
 		Rect ccomp = new Rect();
 		int flags = connectivity + (newMaskVal << 8) +
 			(ffillMode == 1 ? Imgproc.FLOODFILL_FIXED_RANGE : 0);
-		int size;
 
 		Mat mask = new Mat(tmp.rows() + 2, tmp.cols() + 2, CvType.CV_8UC1, new Scalar(0));
 		for (int i = 0; i< tmp.cols(); i++)
