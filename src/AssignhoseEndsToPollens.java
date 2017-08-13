@@ -130,7 +130,10 @@ public class AssignhoseEndsToPollens extends HoseOperations {
 		
 		Mat temp = new Mat();
 		Mat pollenek = new Mat();
-		temp = Analize.thresholdedImageForPollen;/*TODO ez jobb megoldás volt , de ott az extrect ha mégse*/
+		/*TODO  Szerintem ez jobb megoldás volt , de ott az extrect ha mégse (javaba nincs kivonás).
+		 * Egy régebbi képet használok amin csak a polllenek vannak, és azt erodálom
+		 * (ha kirajzoltatod elég hasonló cpp-ban lévõ ugyanezen változóhoz)*/
+		temp = Analize.thresholdedImageForPollen;
 		int dilation_size = 10;
 		int  dilation_type = Imgproc.MORPH_ELLIPSE;
 		Mat element = Imgproc.getStructuringElement(dilation_type,
@@ -163,7 +166,7 @@ public class AssignhoseEndsToPollens extends HoseOperations {
 	 * legközelebbi skeleton vég. Az enyém úgy mûködik, hogy végigmegy a sketelonvégeket , hozzájuk rendeli a legközelebbi kört , és egy
 	 * ArrayList-be(Javas Vector) elmenti a skeleton pontot a hozzárendelt kört és a távolságot. Ezután végigmegy az arraylisten ,
 	 * és kiválasztja az egyes körökhöz legközelebbi skeletonvéget. (Ha a cpp kódba 410. sorba nem feketére színezed a pontokat hanem szürkére,
-	 * akkor látod hogy pl a 484-es képen a bal legfelsõhöz rossz skeletonvéget rendel. Itt mát jót rendel.) */
+	 * akkor látod hogy pl a 484-es képen a bal legfelsõhöz rossz skeletonvéget rendel. Itt már jót rendel.) */
 	/**
 	 * 
 	 * @param skeleton
@@ -371,6 +374,8 @@ public class AssignhoseEndsToPollens extends HoseOperations {
 						}
 					if (counter == 1)
 					{
+						Analize.hoseNumber++;
+						
 						actualLength = 0;
 						Analize.onePollenHoseLengths.clear();
 						System.out.println("Counter = " + counter + " at: " + vegpontok.get(0));
@@ -380,6 +385,8 @@ public class AssignhoseEndsToPollens extends HoseOperations {
 					}
 					else if (counter == 2)
 					{
+						Analize.hoseNumber++;
+						
 						System.out.println("Counter = " + counter + " at: " + vegpontok.get(0) + " and " + vegpontok.get(1));
 						skeleton.clearSkeleton(mask);
 					}	

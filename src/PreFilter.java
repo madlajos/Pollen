@@ -6,9 +6,9 @@ import org.opencv.imgproc.Imgproc;
 public class PreFilter extends Analize{
 
 	/**
-	 preFilter(): setThreshold-hoz készíti elõ a képet
-	 operation: morphologyEx paraméter
-	 element:
+	 * preFilter(): setThreshold-hoz készíti elõ a képet
+	 * operation: morphologyEx paraméter
+	 * element: morphologyEx paraméter
 	 */
 	public void preFilter()
 	{
@@ -18,7 +18,7 @@ public class PreFilter extends Analize{
 	}
 
 	/**
-	 Thresholdozza az elõszûrt képet
+	 * Thresholdozza az elõszûrt képet
 	 */
 	public void setThreshold()
 	{

@@ -70,9 +70,7 @@ public class MainForDev
 		li.Beolvas();
 		li.Resize();
 		li.Decolorize();
-		
-
-		
+				
 		PreFilter pf = new PreFilter();
 		pf.preFilter();
 		pf.setThreshold();

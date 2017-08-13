@@ -9,9 +9,9 @@ import org.opencv.imgproc.Imgproc;
 public class LoadImg extends Analize{
 
 	/**
-	 Beolvas(): A kép beolvasására szolgál. originalImage-be matként, image-be képként tölti.
-	 Az elõbbi a mûveletekhez kell, az image az interfacere való kiíráshoz.
-	 Minden kiválasztott képpel ez lesz meghívva
+	 * A kép beolvasására szolgál. originalImage-be matként, image-be képként tölti.
+	 * Az elõbbi a mûveletekhez kell, az image az interfacere való kiíráshoz.
+	 * Minden kiválasztott képpel ez lesz meghívva
 	 */
 	public void Beolvas()
 	{
@@ -21,8 +21,8 @@ public class LoadImg extends Analize{
 	}	
 
 	/**
-	 Átméretezés a gyorsabb elemzéshez
-	 originalImagebõl resizedImage
+	 * Átméretezés a gyorsabb elemzéshez
+	 * originalImagebõl resizedImage
 	 */
 	public void Resize()
 	{
@@ -30,8 +30,8 @@ public class LoadImg extends Analize{
 	}
 
 	/**
-	 Greyscalere transzformálás
-	 resizedImagebõl greyImage
+	 * Greyscalere transzformálás
+	 * resizedImagebõl greyImage
 	 */
 	public void Decolorize()
 	{

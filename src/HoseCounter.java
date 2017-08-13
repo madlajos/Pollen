@@ -45,6 +45,8 @@ public class HoseCounter extends HoseOperations
 				{
 					Scalar newVal = new Scalar(255, 255, 255); ///A növesztett régió új színe
 					Point seed = new Point(i, j); ///Régiónövesztés gyökere
+					/*TODO : Áron, itt Java-ban a floodfillnek nincs olyan változata,
+					 *  hogy nem kell maszk, de te többször is azt használod cpp-ba, ezért itt ez más(meg még máshol is)*/
 					size = Imgproc.floodFill(dst_gray, mask, seed, newVal, ccomp, new Scalar(loDiff, loDiff, loDiff), new Scalar(upDiff, upDiff, upDiff), flags);
 					if (size < 40)
 					{						
@@ -53,8 +55,6 @@ public class HoseCounter extends HoseOperations
 					else
 					{
 						pointList.add(seed);
-						Analize.hoseNumber++;/*TODO szerintem ne itt számoljuk, me ha metszi egymást akkor szar, viszont amikor
-						 					hosszt számolunk akkor ott szétválasztjuk ah metszi egymást*/
 					}
 				}
 			}

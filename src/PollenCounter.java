@@ -2,6 +2,9 @@ import org.opencv.imgproc.Imgproc;
 
 public class PollenCounter extends Analize
 {	
+	/**
+	 * 
+	 */
 	public void pollenCounter() 
 	{
 		/**

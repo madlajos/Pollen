@@ -92,7 +92,7 @@ public class skeleton extends HoseOperations
 						neighbor7_bit = true;
 					else
 						neighbor7_bit = false;
-
+					/*TODO Itt is módosítottam kicsit, hogy Java megegye*/
 					int C = ((!neighbor1_bit && (neighbor2_bit || neighbor3_bit) ? 1 : 0) +
 							(!neighbor3_bit && (neighbor4_bit || neighbor5_bit) ? 1 : 0) +
 							(!neighbor5_bit && (neighbor6_bit || neighbor7_bit) ? 1 : 0) +
@@ -142,6 +142,7 @@ public class skeleton extends HoseOperations
 				if (intensity[0] == 255)
 				{
 					Point seed = new Point(i, j);
+					/*TODO Asszem floodFill itt is más*/
 					Imgproc.floodFill(tmp, mask, seed, newVal, ccomp, new Scalar(loDiff, loDiff, loDiff), new Scalar(upDiff, upDiff, upDiff), flags);
 
 					for (int m = 1; m< tmp.cols() - 1; m++)
