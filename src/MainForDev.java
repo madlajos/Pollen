@@ -99,7 +99,7 @@ public class MainForDev
 		a.vegSzamol();
 
 		
-		Image imagetodisplay = toBufferedImage(Analize.hoseEnds);
+		Image imagetodisplay = toBufferedImage(Analize.hoses);
         DisplayImage(imagetodisplay);
         System.out.printf("Pollen Number is: %d\n", Analize.circleNumber);
         System.out.printf("Hose Number is: %d", Analize.hoseNumber);
