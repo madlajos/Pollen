@@ -15,7 +15,7 @@ public class LoadImg extends Analize{
 	 */
 	public void Beolvas()
 	{
-		Analize.originalImage = Imgcodecs.imread("C:\\Users\\mukodjpls\\Documents\\GitHub\\Pollen\\VH482.jpg");
+		Analize.originalImage = Imgcodecs.imread("C:\\Users\\mukodjpls\\Documents\\GitHub\\Pollen\\VH489.jpg");
 		//Image image = new Image("file:C:\\Users\\madla\\OneDrive\\Documents\\GitHub\\imgproc\\VH484.jpg");
 		//return image;
 	}	

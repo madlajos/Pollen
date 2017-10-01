@@ -97,9 +97,11 @@ public class MainForDev
 		Analize.hoseEnds = a.vegKeres(Analize.grownhoseEnds);/*TODO Novesztest nem kene torolni szamitaskor ?*/
 		a.vegTorles();
 		a.vegSzamol();
+		
+		
 
 		
-		Image imagetodisplay = toBufferedImage(Analize.hoses);
+		Image imagetodisplay = toBufferedImage(Analize.hoseEnds);
         DisplayImage(imagetodisplay);
         System.out.printf("Pollen Number is: %d\n", Analize.circleNumber);
         System.out.printf("Hose Number is: %d", Analize.hoseNumber);

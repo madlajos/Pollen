@@ -192,9 +192,6 @@ public class AssignhoseEndsToPollens extends HoseOperations {
 					)
 			{
 				//circle(centers, center, 2, 255, -1, 8, 0);
-				
-				Imgproc.circle(Analize.hoseEnds, center, 0,new Scalar(150), -1, 8, 0);
-				Imgproc.circle(Analize.hoseEnds, center, 3, new Scalar(150), 3, 8, 0);
 			}
 		}
 		
@@ -386,9 +383,15 @@ public class AssignhoseEndsToPollens extends HoseOperations {
 					else if (counter == 2)
 					{
 						Analize.hoseNumber++;
-						
+						HoseLengthMeasure.branches.clear();
+						HoseLengthMeasure.pointsToRecolor.clear();
+						HoseLengthMeasure.pointsToReturn.clear();
+						actualLength = 0;
 						System.out.println("Counter = " + counter + " at: " + vegpontok.get(0) + " and " + vegpontok.get(1));
-						skeleton.clearSkeleton(mask);
+						mask = skeleton.clearSkeleton(mask);
+						Analize.test = mask;
+						HoseLengthMeasure.doubleCount(vegpontok,mask);
+						
 					}	
 	
 					//counter: egy adott tömlõhöz ennyi pollen tartozik

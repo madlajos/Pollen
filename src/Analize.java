@@ -90,8 +90,13 @@ public class Analize
 	 * HoseLengthMeasure változói
 	 */
 	
-	/*Azon a tömlõ végek, melyeknél 1 pollenhez 1 tömlõ tartozik*/
+	/*Azon a tömlõ hosszak, melyeknél 1 pollenhez 1 tömlõ tartozik*/
 	protected static ArrayList<Double> onePollenHoseLengths = new ArrayList<Double>();
+	
+	/*Azon a tömlõ hosszak, ahol 2 pollent összeköt egy tömlõ */
+	protected static ArrayList<Double> connectedPollenHoseLengths = new ArrayList<Double>();
+	
+	protected static Mat test = new Mat();
 
    
 }
